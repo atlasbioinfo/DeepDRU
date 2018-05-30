@@ -8,7 +8,7 @@
 	
 More details:
 
-##1.	"vivoMRNAStructurePredictModel.tf"
+## 1.	"vivoMRNAStructurePredictModel.tf"
 
 	It's a deep learning model built with Tensorflow and Keras. 
 	The model enters 6 features and outputs 1 classification value after prediction.
@@ -19,7 +19,7 @@ More details:
 	
 	You can use it using the Keras command "load_model()"or our provided Python script.
 	
-##2. loadModelAndPredict.py
+## 2. loadModelAndPredict.py
 	
 	You need to install Python 3.X and some Python packages below:
 	Tensorflow,Keras and numpy
@@ -28,7 +28,7 @@ More details:
 	Command line:
 		python loadModelAndPredict.py TestSample vivoMRNAStructurePredictModel.tf >predictResult
 		
-##3. TestSample.tsv
+## 3. TestSample.tsv
 
 	Randomly acquired 5,000 unstable mRNA structures and 5,000 stable mRNA structures with location,label and 6 features.
 	The data of tsv format is as follows:
@@ -47,7 +47,7 @@ More details:
 >	9. GC contents of structure sequence;
 >	10. Relative positon of mRNA structure;
 	
-##4. predictResult
+## 4. predictResult
 
 	The predict results of TestSample.tsv.
 	
