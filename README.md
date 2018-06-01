@@ -1,4 +1,4 @@
-# Decipher the rules which mRNA structure differs in vivo and in vitro by deep learning.
+# Decipher the rules which mRNA structure differs in vivo and in vitro by deep neural networks.
 
 >This floder contains:
 >1.	vivoMRNAStructurePredictModel.tf	:	Well-trained DNN model
