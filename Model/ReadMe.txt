@@ -4,6 +4,7 @@ This floder contains:
 2.	loadModelAndPredict.py	:	Python script to load models and predict data
 3.	TestSample.tsv	:	Randomly acquired 5,000 unstable mRNA structures and 5,000 stable mRNA structures.
 4.	predictResult	:	TestSample's predict results
+5. 	acc.pl		:		Perl script to compute accuracy of predictResult
 	
 More details:
 
@@ -29,7 +30,7 @@ More details:
 		
 3. TestSample.tsv
 
-	Randomly acquired 5,000 unstable mRNA structures and 5,000 stable mRNA structures with location,label and 6 features.
+	Randomly acquired 1,000 unstable mRNA structures and 1,000 stable mRNA structures with location,label and 6 features.
 	The data of tsv format is as follows:
 	
 	YDR376W	993	1090	1	-0.868242130762128	0.577981563653556	-1.34552595068809	-0.200431557615837	0.316326530612245	0.703241053342336
@@ -61,6 +62,17 @@ More details:
 	4. mRNA structure Label
 	5. Model predict value and our threshold of classification is 0.5.
 	
+5. acc.pl
+
+	A perl script to compute accuracy of predict results.
+	You need install 'perl'.
+	
+	Command line:
+	perl acc.pl predictResult
+	
+	Echo:
+	1999 		   	2000    0.9995
+	TruePositive	All		Accuracy
 	
 	
 	
