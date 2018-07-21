@@ -1,9 +1,7 @@
 # DeepRSS: A deep learning model was used to predict mRNA structural stability in *S. cerevisiae* 
-***
 
 DeepRSS predicts the stability of in vivo mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their 6  features: RD,MFE,INI,RPKM,GC,POS. DeepRSS is a end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: stable or unstable.Stable *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. Unstabile *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
 
-***
 ## DeepRSS Versions
 
 * Version 1.0-First version released on 
@@ -11,6 +9,10 @@ DeepRSS predicts the stability of in vivo mRNA structures during translation thr
 
 ## DeepRSS installation
 
+DeepRSS was modeled by Tensorflow and Keras. You need to install Tensorflow and Keras before use DeepRSS. 
+
+1, [Tensorflow](https://www.tensorflow.org/)
+2. [Keras](https://github.com/keras-team/keras/)
 
 
 >This floder contains:
@@ -29,7 +31,7 @@ More details:
 	The 6 features of mRNA are:
 		RD	MFE	INI	RPKM GC	POS
 	For detailed calculation methods of these parameters, please see our article:
-	"Deciphering the rules which mRNA structures differs from vivo and vitro in saccharomyces cerevisiae by deep learning" (Submitted)
+	"Deciphering the rules which mRN A structures differs from vivo and vitro in saccharomyces cerevisiae by deep learning" (Submitted)
 	
 	You can use it using the Keras command "load_model()"or our provided Python script.
 	
