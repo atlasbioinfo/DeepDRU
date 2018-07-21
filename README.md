@@ -1,4 +1,17 @@
-# Deciphering the rules of mRNA structure differentiation in vivo and in vitro with deep neural networks in Saccharomyces cerevisiae.
+# DeepRSS: A deep learning model was used to predict mRNA structural stability in *S. cerevisiae* 
+***
+
+DeepRSS predicts the stability of in vivo mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their 6  features: RD,MFE,INI,RPKM,GC,POS. DeepRSS is a end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: stable or unstable.Stable *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. Unstabile *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
+
+***
+## DeepRSS Versions
+
+* Version 1.0-First version released on 
+* Version 1.1-Support tensorflow 1.9
+
+## DeepRSS installation
+
+
 
 >This floder contains:
 >1.	vivoMRNAStructurePredictModel.tf	:	Well-trained DNN model
