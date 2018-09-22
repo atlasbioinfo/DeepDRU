@@ -1,6 +1,7 @@
 # DeepRSS: A deep learning model was used to predict mRNA structural stability in *S. cerevisiae* 
 
-![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRSS/tree/master/DeepRSS/DeepRSSModel/fig1.png)
+![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRSS/blob/master/DeepRSSModel/fig1.png)
+
 
 DeepRSS predicts the stability of in vivo mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their 6  features: RD,MFE,INI,RPKM,GC,POS. DeepRSS is a end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: stable or unstable.Stable *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. Unstabile *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
 
@@ -94,7 +95,7 @@ Training process:     modelOut*
 
 The folder contains the DeepRSS model and the schematic overview of DeepRSS modeling.
 
-![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRSS/tree/master/DeepRSS/DeepRSSModel/png)
+![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRSS/blob/master/DeepRSSModel/fig7.png)
 
 By performing a 10-fold cross-validation on a variety of hyperparameters, the final end-to-end DNN model has 9 fully connected layers with 256 cells per layer; the activation functions adopted were ReLU and Sigmoid; the Adam optimization function was adopted to accelerate the training process; and optimization techniques, batch normalization and early stopping was added to prevent overfitting of the model. The precision of the DeepRSS model reached 99.71% and area under ROC curve (AUC) reached 0.998001.
 
