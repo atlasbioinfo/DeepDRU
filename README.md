@@ -29,7 +29,7 @@ DeepRSS is the first attempt to apply a deep learning framework to predicting th
 
 ## Folder composition
 .
->10FoldCrossValidation : 10-fold cross-validation of 60 models.
+>Raw data : raw mRNA structure data with 6 features and label.
 >DeepRSSModel : DeepRSS model and its schematic overview.
 >Sample : An example of how to use DeepRSS for mRNA structure state prediction.
 >Scripts : Important Perl and Python scripts used.
