@@ -34,13 +34,7 @@ DeepRSS is the first attempt to apply a deep learning framework to predicting th
 >Sample : An example of how to use DeepRSS for mRNA structure state prediction.
 >Scripts : Important Perl and Python scripts used.
 
-### 10FoldCrossValidation
-
-10-fold cross-validation is a more effective means of judging a model's prediction effect. We tested the predictions of 60 deep learning models with a 10-fold cross-validation test in the project. This folder contains files and scripts that perform 10-fold cross-validation of multiple models.To select the most suitable model, we performed a 10CV on models with multiple dense layers (1 to 10 layers) and multiple unit per layers (16, 32, 64, 128, 256 and 512 units) (Figure S2-5). Binary number of units was used because it can empirically accelerate the training process.  Each model was subsequently trained on a training set for 500 epochs and validated on the development set. 
-
-The following is an overview of the files included in each folder.
-
-#### ./RawData/ 
+### ./RawData/ 
 
 The "./Data/" folder contains 10 training sets (Train0-9) and development sets (Dev0-9) for training. These data were generated as follows:
 
@@ -71,24 +65,6 @@ Each with 9 groups as the training set (Train) and 1 group as the development se
 	>7. Normalized ln(RPKM) of BY and RM samples (Albert et al., 2014);
 	>8. GC contents of structure sequence;
 	>9. Relative positon of mRNA structure;
-```
-
-#### ./Models/
-
-All the models used in the project and the training process.
-
-It's a deep learning model built with Tensorflow. The model enters 6 features and outputs 1 classification value after prediction. The 6 features of mRNA are:
-
-RD	MFE	INI	RPKM GC	POS
-
-For detailed calculation methods of these parameters, please see our article:
-
-**"Deciphering the rules which mRNA structures differs from vivo and vitro in saccharomyces cerevisiae by deep learning" (Submitted)**
-    
-
-```bash
-Deep learning model:  *.tf
-Training process:     modelOut*
 ```
 
 ### DeepRSSModel
