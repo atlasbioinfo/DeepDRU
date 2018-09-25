@@ -9,7 +9,7 @@ TrainingProcessOutput: The accuracy and loss of each epoch during the model trai
 ModelSave: 	Save final model file.
 '''
 
-# Notice!!! The version of Tensorflow should be >=1.90 !!!
+# Notice!!! The version of Tensorflow should be >=1.00 !!!
 
 import fileinput
 import numpy as np
