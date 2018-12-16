@@ -1,37 +1,37 @@
-# DeepRSS: A deep learning model was used to predict mRNA structural stability in *S. cerevisiae* 
+# DeepRDS: A deep learning model was used to predict mRNA structural stability in *S. cerevisiae* 
 
-![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRSS/blob/master/DeepRSSModel/fig1.png)
+![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRDS/blob/master/DeepRDSModel/fig1.png)
 
 
-DeepRSS predicts the stability of in vivo mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their 6  features: RD,MFE,INI,RPKM,GC,POS. DeepRSS is a end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: stable or unstable.Stable *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. Unstabile *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
+DeepRDS predicts the stability of in vivo mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their 6  features: RD,MFE,INI,RPKM,GC,POS. DeepRSS is a end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: stable or unstable.Stable *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. Unstabile *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
 
-## DeepRSS Versions
+## DeepRDS Versions
 
 * Version 1.0-First version released on 20180922 
 * Version 1.1-will release on 20190101
 
-## DeepRSS model usage
+## DeepRDS model usage
 
-DeepRSS was modeled by Tensorflow. You need to install Python and Tensorflow before use DeepRSS. 
+DeepRDS was modeled by Tensorflow. You need to install Python and Tensorflow before use DeepRDS. 
 
 **[Tensorflow version>1.0](https://www.tensorflow.org/)**
 **[Python3](https://www.python.org/)**
 
-In the Sample folder we provide all the files for the exercise DeepRSS to predict. Just simply run the following code to complete the prediction of the in vivo structure of the mRNA in Test0 and output the structure to preTest0.
+In the Sample folder we provide all the files for the exercise DeepRDS to predict. Just simply run the following code to complete the prediction of the in vivo structure of the mRNA in Test0 and output the structure to preTest0.
 
 ```bash
-    python LoadAndPreDictModel.py DeepRSS.tf Test0 >preTest0
+    python LoadAndPreDictModel.py DeepRDS.tf Test0 >preTest0
 ```
 
-## DeepRSS design
+## DeepRDS design
 
-DeepRSS is the first attempt to apply a deep learning framework to predicting the structure of mRNA in vivo, and the model structure is very simple.The input layer of the 6 units is followed by a 6-layer fully connected layer, each unit being 256.The activation function of the fully connected layer is ReLU, the activation function of the output is Sigmoid, and the optimization algorithm is Adam.In the future update of DeepRSS, we will adopt more structural data and are trying to use CNN or RNN to predict the structure of the body.
+DeepRDS is the first attempt to apply a deep learning framework to predicting the structure of mRNA in vivo, and the model structure is very simple.The input layer of the 6 units is followed by a 6-layer fully connected layer, each unit being 256.The activation function of the fully connected layer is ReLU, the activation function of the output is Sigmoid, and the optimization algorithm is Adam.In the future update of DeepRDS, we will adopt more structural data and are trying to use CNN or RNN to predict the structure of the body.
 
 ## Folder composition
 .
 >Raw data : raw mRNA structure data with 6 features and label.
->DeepRSSModel : DeepRSS model and its schematic overview.
->Sample : An example of how to use DeepRSS for mRNA structure state prediction.
+>DeepRDSModel : DeepRDS model and its schematic overview.
+>Sample : An example of how to use DeepRDS for mRNA structure state prediction.
 >Scripts : Important Perl and Python scripts used.
 
 ### ./RawData/ 
@@ -67,13 +67,13 @@ Each with 9 groups as the training set (Train) and 1 group as the development se
 	>9. Relative positon of mRNA structure;
 ```
 
-### DeepRSSModel
+### DeepRDSModel
 
-The folder contains the DeepRSS model and the schematic overview of DeepRSS modeling.
+The folder contains the DeepRDS model and the schematic overview of DeepRDS modeling.
 
-![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRSS/blob/master/DeepRSSModel/fig7.png)
+![Schematic overview of DeepRDS](https://github.com/atlasbioinfo/DeepRDS/blob/master/DeepRDSModel/fig7.png)
 
-By performing a 10-fold cross-validation on a variety of hyperparameters, the final end-to-end DNN model has 9 fully connected layers with 256 cells per layer; the activation functions adopted were ReLU and Sigmoid; the Adam optimization function was adopted to accelerate the training process; and optimization techniques, batch normalization and early stopping was added to prevent overfitting of the model. The precision of the DeepRSS model reached 99.71% and area under ROC curve (AUC) reached 0.998001.
+By performing a 10-fold cross-validation on a variety of hyperparameters, the final end-to-end DNN model has 9 fully connected layers with 256 cells per layer; the activation functions adopted were ReLU and Sigmoid; the Adam optimization function was adopted to accelerate the training process; and optimization techniques, batch normalization and early stopping was added to prevent overfitting of the model. The precision of the DeepRDS model reached 99.71% and area under ROC curve (AUC) reached 0.998001.
 
 ### Scripts
 
@@ -112,7 +112,7 @@ Specific installation methods are detailed in our article.
 	
 	Command line:
     ```bash
-        python LoadAndPreDictModel.py DeepRSS.tf Test0 >preTest0
+        python LoadAndPreDictModel.py DeepRDS.tf Test0 >preTest0
     ```
     
 The predict results is in TSV format.
