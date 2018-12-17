@@ -54,10 +54,10 @@ xtest=np.array(xtest)
 ytest=np.array(ytest)
 
 model=Sequential()
-model.add(Dense(6,input_dim=6,activation=tf.nn.relu))
+model.add(Dense(5,input_dim=5,activation=tf.nn.relu))
 
-for i in range(1,6):
-    model.add(Dense(256,activation=tf.nn.relu))
+for i in range(1,8):
+    model.add(Dense(512,activation=tf.nn.relu))
     model.add(BatchNormalization())
 
 model.add(Dense(1,activation=tf.nn.sigmoid))
@@ -74,7 +74,7 @@ model.compile(optimizer=adam,loss='binary_crossentropy',metrics=['accuracy'])
 # If you use CPU, you can decrease the batch size to improve efficiency. 
 # Recommended batch for GPU >= 1024, CPU <=512
 
-model.fit(x,y,batch_size=2048,epochs=100000,callbacks=[history,earlyStop],verbose=1,validation_data=(xtest,ytest))
+model.fit(x,y,batch_size=2048,epochs=10000,callbacks=[history,earlyStop],verbose=1,validation_data=(xtest,ytest))
 
 f=open(sys.argv[3],"w")
 for j in range(len(history.acc)):
