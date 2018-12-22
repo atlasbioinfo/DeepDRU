@@ -1,8 +1,8 @@
-# DeepRDS: A deep learning model was used to predict mRNA structural stability in *S. cerevisiae* 
+# DeepRDS: A deep learning model was used to predict mRNA structural de-structured degree in *S. cerevisiae* 
 
 ![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRDS/blob/master/DeepRDSModel/fig1.png)
 
-DeepRDS predicts the stability of *in vivo* mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their six features: RD, MFE, INI, GC, POS. DeepRSS is an end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: stable or unstable. Stable *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. Unstable *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
+DeepRDS predicts the stability of *in vivo* mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their six features: RD, MFE, INI, GC, POS. DeepRSS is an end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: strongly de-structured mRNA （SDS） or weak de-structured mRNA (WDS). WDS *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. SDS *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
 
 ## DeepRDS Versions
 
