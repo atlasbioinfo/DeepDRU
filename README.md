@@ -1,36 +1,36 @@
-# DeepRDS: A deep learning model was used to predict mRNA structural de-structured degree in *S. cerevisiae* 
+# DeepDRU: A deep learning model was used to predict mRNA structural de-structured degree in *S. cerevisiae* 
 
-![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepRDS/blob/master/DeepRDSModel/fig1.png)
+![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepDRU/blob/master/DeepRDSModel/fig1.png)
 
-DeepRDS predicts the stability of *in vivo* mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their six features: RD, MFE, INI, GC, POS. DeepRSS is an end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: strongly de-structured mRNA （SDS） or weak de-structured mRNA (WDS). WDS *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. SDS *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
+DeepDRU predicts the stability of *in vivo* mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their six features: RD, MFE, INI, GC, POS. DeepRSS is an end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: strongly de-structured mRNA （SDS） or weak de-structured mRNA (WDS). WDS *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. SDS *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
 
-## DeepRDS Versions
+## DeepDRU Versions
 
 * Version 1.0-First version released on 20180922 
 * Version 1.1-Revise release on 20190101, deleted feature RPKM.
 
-## DeepRDS model usage
+## DeepDRU model usage
 
-DeepRDS was modeled by Tensorflow. You need to install Python and Tensorflow before use DeepRDS. 
+DeepDRU was modeled by Tensorflow. You need to install Python and Tensorflow before use DeepDRU. 
 
 **[Tensorflow version>1.0](https://www.tensorflow.org/)**
 **[Python3](https://www.python.org/)**
 
-In the Sample folder, we provide all the files for the exercise DeepRDS to predict. Just simply run the following code to complete the prediction of the in vivo structure of the mRNA in Test0 and output the structure to preTest0.
+In the Sample folder, we provide all the files for the exercise DeepDRU to predict. Just simply run the following code to complete the prediction of the in vivo structure of the mRNA in Test0 and output the structure to preTest0.
 
 ```bash
-    python LoadAndPreDictModel.py DeepRDS.tf Test0 >preTest0
+    python LoadAndPreDictModel.py DeepDRU.tf Test0 >preTest0
 ```
 
-## DeepRDS design
+## DeepDRU design
 
-DeepRDS is the first attempt to apply a deep learning framework to predict the structure of mRNA in vivo, and the model structure is very simple. The input layer of the five units is followed by a 8-layer fully connected layer, each unit is 512. The activation function of the fully connected layer is ReLU, the activation function of the output is Sigmoid, and the optimization algorithm is Adam. In the future update of DeepRDS, we will adopt more structural data and are trying to use CNN or RNN to predict the structure of the body.
+DeepDRU is the first attempt to apply a deep learning framework to predict the structure of mRNA in vivo, and the model structure is very simple. The input layer of the five units is followed by a 8-layer fully connected layer, each unit is 512. The activation function of the fully connected layer is ReLU, the activation function of the output is Sigmoid, and the optimization algorithm is Adam. In the future update of DeepDRU, we will adopt more structural data and are trying to use CNN or RNN to predict the structure of the body.
 
 ## Folder composition
 .
 >Raw data: raw mRNA structure data with five features and label.
-> DeepRDSModel: DeepRDS model and its schematic overview.
-> Sample: An example of how to use DeepRDS for mRNA structure state prediction.
+> DeepDRUModel: DeepDRU model and its schematic overview.
+> Sample: An example of how to use DeepDRU for mRNA structure state prediction.
 > Scripts: Important Perl and Python scripts used.
 
 ### ./RawData/ 
@@ -65,13 +65,13 @@ Each group of 9 serves as the training set and 1 as the development set (Dev). T
 	>8. Relative positon of mRNA structure;
 ```
 
-### DeepRDSModel
+### DeepDRUModel
 
-The folder contains the DeepRDS model and the schematic overview of DeepRDS modeling.
+The folder contains the DeepDRU model and the schematic overview of DeepDRU modeling.
 
-![Schematic overview of DeepRDS](https://github.com/atlasbioinfo/DeepRDS/blob/master/DeepRDSModel/fig7.png)
+![Schematic overview of DeepDRU](https://github.com/atlasbioinfo/DeepDRU/blob/master/DeepRDSModel/fig7.png)
 
-By performing a 10-fold cross-validation on a variety of hyperparameters, the final end-to-end DNN model has 9 fully connected layers with 256 cells per layer; the activation functions adopted were ReLU and Sigmoid; the Adam optimization function was adopted to accelerate the training process; and optimization techniques, batch normalization, and early stopping was added to prevent overfitting of the model. The precision of the DeepRDS model reached 99.53%.
+By performing a 10-fold cross-validation on a variety of hyperparameters, the final end-to-end DNN model has 9 fully connected layers with 256 cells per layer; the activation functions adopted were ReLU and Sigmoid; the Adam optimization function was adopted to accelerate the training process; and optimization techniques, batch normalization, and early stopping was added to prevent overfitting of the model. The precision of the DeepDRU model reached 99.53%.
 
 ### Scripts
 
@@ -110,7 +110,7 @@ Specific installation methods are detailed in our article.
 	
 	Command line:
     ```bash
-        python LoadAndPreDictModel.py DeepRDS.tf Test0 >preTest0
+        python LoadAndPreDictModel.py DeepDRU.tf Test0 >preTest0
     ```
     
 The predict results are in TSV format.
