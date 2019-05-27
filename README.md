@@ -1,8 +1,9 @@
 # DeepDRU: A deep learning model was used to predict mRNA structural de-structured degree in *S. cerevisiae* 
+## [Deciphering the rules of mRNA structure differentiation in Saccharomyces cerevisiae in vivo and in vitro with deep neural networks](https://www.tandfonline.com/doi/full/10.1080/15476286.2019.1612692)
 
-![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepDRU/blob/master/DeepRDSModel/fig1.png)
+![Schematic overview of DeepRSS](https://github.com/atlasbioinfo/DeepDRU/Figures/fig1.png)
 
-DeepDRU predicts the stability of *in vivo* mRNA structures during translation through a series of in vivo RNA structural features. The model was originally modeled in S. cerevisiae by fitting 130000 mRNA structures with their six features: RD, MFE, INI, GC, POS. DeepRSS is an end-to-end binary classification model that can be divided mRNA structure *in vivo* into two types: strongly de-structured mRNA （SDS） or weak de-structured mRNA (WDS). WDS *in vivo* means that although ribosome unwinded mRNA structure during translation, the structure itself could still fold-back and formed structure. SDS *in vivo* means that it was difficult to form a structure again by ribosomes unwinding during translation. DeepRSS can promote the field of mRNA structural design *in vivo* and the elaboration of mRNA structural functions. In the future, more species and more structural features will be added as the version is updated.
+The structure of mRNA in vivo is unwound to some extent in response to multiple factors involved in the translation process, resulting in significant differences from the structure of the same mRNA in vitro. In this study, we have proposed a novel application of deep neural networks, named DeepDRU, to predict the degree of mRNA structure unwinding in vivo by fitting five quantifiable features that may affect mRNA folding: ribosome density (RD), minimum folding free energy (MFE), GC content, translation initiation ribosome density (INI), and mRNA structure position (POS). mRNA structures with adjustment of the simulated structural features were designed and then fed into the trained DeepDRU model. We found unique effect regions of these five features on mRNA structure in vivo. Strikingly, INI is the most critical factor affecting the structure of mRNA in vivo, and structural sequence features, including MFE and GC content, have relatively smaller effects. DeepDRU provides a new paradigm for predicting the unwinding capability of mRNA structure in vivo. This improved knowledge about the mechanisms of factors influencing the structural capability of mRNA to unwind will facilitate the design and functional analysis of mRNA structure in vivo.
 
 ## DeepDRU Versions
 
@@ -160,5 +161,5 @@ Usage:
 --------
 I am a beginner of deep learning because I found that deep learning can solve the problems in my research perfectly, so I started to understand. If there is a BUG in the project, I hope that you will improve it if you propose it. If you have suggestions for the project or would like to discuss with me, you can send me an email.
 
-My Email is: atlasbioin4@gmail.com
+My Email is: atlasbioin4@gmail.com or atlasbioinfo@163.com
 --------
