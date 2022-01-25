@@ -158,8 +158,3 @@ Usage:
 	TruePositive	All		Accuracy
     
     
---------
-I am a beginner of deep learning because I found that deep learning can solve the problems in my research perfectly, so I started to understand. If there is a BUG in the project, I hope that you will improve it if you propose it. If you have suggestions for the project or would like to discuss with me, you can send me an email.
-
-My Email is: atlasbioin4@gmail.com or atlasbioinfo@163.com
---------
